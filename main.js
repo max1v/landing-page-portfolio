@@ -16,7 +16,7 @@ function toContactScroll() {
 let cardtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".cardsbox",
-    start: "top bottom",
+    start: "middle top",
   },
 });
 cardtl.from(".card1", { x: 100, opacity: 0, duration: 0.4 });
