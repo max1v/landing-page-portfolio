@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   autoprefixer: ^10.4.12
   daisyui: ^2.31.0
+  gsap: ^3.11.1
   postcss: ^8.4.16
   tailwindcss: ^3.1.8
   vite: ^3.1.0
 
 dependencies:
   daisyui: 2.31.0_jhfe3rbur6kzimvcehnoniy6fy
+  gsap: 3.11.1
 
 devDependencies:
   autoprefixer: 10.4.12_postcss@8.4.16
@@ -479,6 +481,10 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       is-glob: 4.0.3
+
+  /gsap/3.11.1:
+    resolution: {integrity: sha512-UKuJ0UPhntFHMwT6URFQ4cTQv88xc7Kd9Dhxt7qX9IPhC+d+/a5wKW5E5Vn33hZ53nBI1JfApcEbzKgXkcuPZw==}
+    dev: false
 
   /has/1.0.3:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}

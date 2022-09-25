@@ -1,29 +1,24 @@
-/* import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+gsap.from(".hero", 0.5, { xPercent: 500, opacity: 0, ease: "power1.out" });
 
-setupCounter(document.querySelector('#counter'))
+const contactbuttons = document.querySelectorAll(".contactbutton");
+contactbuttons.forEach(function (currentButton) {
+  currentButton.addEventListener("click", toContactScroll);
+});
+function toContactScroll() {
+  gsap.to(window, { duration: 0.5, scrollTo: "#contact" });
+}
 
-html :
-<div id="app"></div>
-    <script type="module" src="/main.js"></script>
-
- */
+let cardtl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cardsbox",
+    start: "top bottom",
+  },
+});
+cardtl.from(".card1", { x: 100, opacity: 0, duration: 0.4 });
+cardtl.from(".card2", { x: 100, opacity: 0, duration: 0.4 });
+cardtl.from(".card3", { x: 100, opacity: 0, duration: 0.4 });
