@@ -34,6 +34,6 @@ let cardtl = gsap.timeline({
     start: "top bottom",
   },
 });
-cardtl.from(".card1", { xPercent: 100, opacity: 0, duration: 0.5 });
-cardtl.from(".card2", { xPercent: 100, opacity: 0, duration: 0.5 });
-cardtl.from(".card3", { xPercent: 100, opacity: 0, duration: 0.5 });
+cardtl.from(".card1", { xPercent: -100, opacity: 0, duration: 0.5 });
+cardtl.from(".card2", { xPercent: -100, opacity: 0, duration: 0.5 });
+cardtl.from(".card3", { xPercent: -100, opacity: 0, duration: 0.5 });
