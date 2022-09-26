@@ -3,7 +3,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-gsap.from(".hero", 0.5, { xPercent: 500, opacity: 0, ease: "power1.out" });
+gsap.from(".hero-content", 0.5, {
+  xPercent: 500,
+  opacity: 0,
+  ease: "power1.out",
+});
 
 const contactbuttons = document.querySelectorAll(".contactbutton");
 contactbuttons.forEach(function (currentButton) {
@@ -16,9 +20,9 @@ function toContactScroll() {
 let cardtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".cardsbox",
-    start: "middle top",
+    start: "top bottom",
   },
 });
-cardtl.from(".card1", { x: 100, opacity: 0, duration: 0.4 });
-cardtl.from(".card2", { x: 100, opacity: 0, duration: 0.4 });
-cardtl.from(".card3", { x: 100, opacity: 0, duration: 0.4 });
+cardtl.from(".card1", { x: 50, opacity: 0, duration: 0.4 });
+cardtl.from(".card2", { x: 50, opacity: 0, duration: 0.4 });
+cardtl.from(".card3", { x: 50, opacity: 0, duration: 0.4 });
