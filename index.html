@@ -63,15 +63,16 @@
                 <li><a class="contactbutton">Contact</a></li>
               </ul>
             </div>
-            <button>
-              <a class="btn btn-ghost normal-case text-xl" href="/">
+            <a class="btn btn-ghost normal-case text-xl" href="/">
+              <button>
                 <img
                   src="/logo-tomecs-blue.svg"
                   class="w-40"
                   alt="tomecs logo"
+                  decoding="async"
                 />
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
@@ -107,9 +108,10 @@
       <div class="hero min-h-screen bg-base-200 overflow-hidden">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="/hero.jpg"
+            src="/hero.webp"
             class="w-3/4 lg:max-w-2xl rounded-lg shadow-2xl 2xl:max-w-5xl heroimage"
             alt="big image of a man working on a car"
+            decoding="async"
           />
           <div class="flex flex-col items-center lg:items-start">
             <h1 class="text-5xl xl:text-8xl text-center lg:text-left font-bold">
@@ -118,9 +120,9 @@
             <p class="py-6 text-center lg:text-left 2xl:text-2xl">
               We provide honest and reliable vehicle repair services
             </p>
-            <button class="btn btn-primary 2xl:text-xl">
-              <a class="contactbutton"> Get in touch </a>
-            </button>
+            <a class="contactbutton">
+              <button class="btn btn-primary 2xl:text-xl">Get in touch</button>
+            </a>
           </div>
         </div>
       </div>
@@ -136,9 +138,11 @@
         <div class="card w-full lg:w-1/3 bg-base-100 shadow-xl card1">
           <figure class="px-10 pt-10">
             <img
-              src="/first-card.jpg"
+              src="/first-card.webp"
               alt="picture of an email notificatoin"
               class="rounded-xl"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
           <div class="card-body items-center text-center">
@@ -149,9 +153,11 @@
         <div class="card w-full lg:w-1/3 bg-base-100 shadow-xl card2">
           <figure class="px-10 pt-10">
             <img
-              src="/second-card.jpg"
+              src="/second-card.webp"
               alt="picture of a women writting"
               class="rounded-xl"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
           <div class="card-body items-center text-center">
@@ -162,9 +168,11 @@
         <div class="card w-full lg:w-1/3 bg-base-100 shadow-xl card3">
           <figure class="px-10 pt-10">
             <img
-              src="third-card.jpg"
+              src="third-card.webp"
               alt="picture of a happy man doing fist bump  out of a car's window"
               class="rounded-xl"
+              decoding="async"
+              loading="lazy"
             />
           </figure>
           <div class="card-body items-center text-center">
@@ -228,7 +236,13 @@
       class="footer footer-center p-10 bg-neutral text-primary-content"
     >
       <div>
-        <img src="/favicon-tomecs-blue.svg" alt="logo" class="h-20" />
+        <img
+          src="/favicon-tomecs-blue.svg"
+          alt="logo"
+          class="h-20"
+          decoding="async"
+          loading="lazy"
+        />
         <p class="font-bold">Tomecs LLC <br />Professional Car Repairs</p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>
