@@ -3,10 +3,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-gsap.from(".hero-content", 0.5, {
-  xPercent: 500,
+const body = document.querySelector("body");
+
+gsap.from(".contact-content", 0.5, {
   opacity: 0,
-  ease: "power1.out",
+  delay: 0.5,
+  xPercent: 100,
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top bottom",
+  },
+});
+
+gsap.from(".heroimage", 0.5, {
+  opacity: 0,
+  xPercent: 100,
 });
 
 const contactbuttons = document.querySelectorAll(".contactbutton");
@@ -23,6 +34,6 @@ let cardtl = gsap.timeline({
     start: "top bottom",
   },
 });
-cardtl.from(".card1", { x: 50, opacity: 0, duration: 0.4 });
-cardtl.from(".card2", { x: 50, opacity: 0, duration: 0.4 });
-cardtl.from(".card3", { x: 50, opacity: 0, duration: 0.4 });
+cardtl.from(".card1", { xPercent: 100, opacity: 0, duration: 0.5 });
+cardtl.from(".card2", { xPercent: 100, opacity: 0, duration: 0.5 });
+cardtl.from(".card3", { xPercent: 100, opacity: 0, duration: 0.5 });
